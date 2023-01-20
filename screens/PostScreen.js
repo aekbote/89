@@ -24,7 +24,7 @@ export default class PostScreen extends Component {
            light_theme: true,
            light_theme: true,
             is_liked: false,
-            likes: this.props.route.params.post.likes
+            likes: this.props.route.params.value.likes,
         };
     }
 
@@ -281,6 +281,25 @@ const styles = StyleSheet.create({
         fontFamily: "Bubblegum-Sans",
         fontSize: RFValue(25),
         marginLeft: RFValue(5)
-      }
+      },
+    likeButtonLiked: {
+        width: RFValue(160),
+        height: RFValue(40),
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+        backgroundColor: "#eb3948",
+        borderRadius: RFValue(30)
+      },
+      likeButtonDisliked: {
+        width: RFValue(160),
+        height: RFValue(40),
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+        borderColor: "#eb3948",
+        borderWidth: 2,
+        borderRadius: RFValue(30)
+      },
    
 });
