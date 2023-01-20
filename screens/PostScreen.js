@@ -46,7 +46,7 @@ export default class PostScreen extends Component {
     
   likeAction = () => {
     if(this.state.is_liked)
-    { firebase.database() .ref('posts') .child(this.state.post_id) .child('likes') .set(firebase.database.ServerValue.increment(-1)) 
+    { firebase.database() .ref('posts') .child(this.props.route.params.value.likes) .child('likes') .set(firebase.database.ServerValue.increment(-1)) 
     this.setState({likes: this.state.likes-=1 , is_liked:false}) } 
     else{ firebase.database() 
       .ref('posts') 
